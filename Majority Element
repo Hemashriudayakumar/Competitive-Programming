@@ -1,0 +1,16 @@
+class Solution:
+    # Function to find the majority elements in the array
+    def findMajority(self, nums):
+        #Your Code goes here.
+        dic={}
+        for i in nums:
+            if i not in dic:
+                dic[i]=1
+            else:
+                dic[i]+=1
+        arr=[]
+        for i in dic:
+            if dic[i]>len(nums)//3:
+                arr.append(i)
+        
+        return arr if len(arr)>0 else [-1]
