@@ -1,0 +1,14 @@
+
+from typing import List
+
+
+class Solution:
+    def pairsum(self, arr : List[int]) -> int:
+        # code here
+        max1=max(arr)
+        arr.remove(max1)
+        max2=max(arr)
+        sum1=max1+max2
+        return sum1
+
+
