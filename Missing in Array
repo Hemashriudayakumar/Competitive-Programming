@@ -1,0 +1,13 @@
+#User function Template for python3
+class Solution:
+    
+    # Note that the size of the array is n-1
+    def missingNumber(self, n, arr):
+        s=0
+        M=(n*(n+1))//2
+        for I in arr:
+            s+=I
+        re=M-s
+        return re
+ 
+        # code here
