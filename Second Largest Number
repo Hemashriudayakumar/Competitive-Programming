@@ -1,0 +1,14 @@
+#User function Template for python3
+class Solution:
+    def print2largest(self, arr):
+        # Code Here
+        b=set(arr)
+        if(len(b) >1):
+            
+            a=max(arr)
+            b.remove (a)
+            return max(b)
+            
+        else:
+            return -1
+            
