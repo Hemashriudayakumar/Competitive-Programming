@@ -1,0 +1,16 @@
+#User function Template for python3
+
+
+class Solution:
+    def evenlyDivides (self, N):
+        
+            org=N
+            count=0
+            while(org!=0):
+                r=org%10
+                if(r!=0 and N%r==0):
+                    count=count+1
+                org=org//10
+            return count
+        
+        
