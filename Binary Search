@@ -1,0 +1,19 @@
+#User function template for Python
+
+class Solution:
+    def binarysearch(self, arr, k):
+        # Code Here
+       I,la=0,len(arr)-1
+       mid=(I+la)//2
+       while arr[mid]!=k and I<=la:
+           if arr[mid]<k:
+              I=mid+1
+           elif arr[mid]>k:
+              la=mid-1
+           else:
+               return -1
+           mid=(I+la)//2
+       if(arr[mid]==k):
+          return mid
+       else:
+           return-1
