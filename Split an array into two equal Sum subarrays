@@ -1,0 +1,13 @@
+class Solution:
+    def canSplit(self, arr):
+        #code here
+        sum1=0
+        for i in range(0,len(arr)):
+            sum1+=arr[i]
+        sum2=0
+        for j in range(len(arr)-1,-1,-1):
+            sum2+=arr[j]
+            if(sum1-sum2==sum2):
+                return True
+        return False
+        
