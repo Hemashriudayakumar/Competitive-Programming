@@ -1,0 +1,14 @@
+class Solution:
+    #Back-end complete function Template for Python 3
+    
+    #Function to find the leaders in the array.
+    def leaders(self,n, arr):
+        #Code here
+        ar1,max1=[],0
+        for i in range(len(arr)-1,-1,-1):
+            if max1<=arr[i]:
+                max1=arr[i]
+                ar1.append(max1)
+        ar1.reverse()
+        return ar1
+
