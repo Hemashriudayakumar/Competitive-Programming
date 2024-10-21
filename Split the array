@@ -1,0 +1,12 @@
+#User function Template for python3
+class Solution:
+    def countgroup(self,arr): 
+        #Complete the function
+        n=len(arr)
+        count=0
+        for i in arr:
+            count=count^i
+        if count==0:
+            return (2**(n-1))-1
+        else:
+            return 0
