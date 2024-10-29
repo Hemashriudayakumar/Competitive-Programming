@@ -1,0 +1,14 @@
+class Solution:
+    def removeDuplicates(self, arr):
+        # code here 
+        dic={}
+        ar=[]
+        for i in arr:
+            if i not in dic:
+                dic[i]=1
+            else:
+                dic[i]+=1
+        for i in dic:
+           
+            ar.append(i)
+        return ar
