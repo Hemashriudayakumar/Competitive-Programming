@@ -1,0 +1,19 @@
+#User function Template for python3
+
+class Solution:
+    
+    #Function to find the first non-repeating character in a string.
+    def nonRepeatingChar(self,s):
+        #code here
+        dic={}
+        for i in s:
+            if i not in dic:
+                dic[i]=1
+            else:
+                dic[i]+=1
+        for i in s:
+            if dic[i]==1:
+                return i
+        return '$'
+    
+    
