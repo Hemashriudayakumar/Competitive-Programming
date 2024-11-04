@@ -1,0 +1,14 @@
+class Solution:
+    def ExtractNumber(self,sentence):
+        #code here
+        se=sentence.split()
+        s=[]
+        for i in se:
+            if i.isnumeric() and '9' not in i:
+                s.append(int(i))
+        
+        if len(s)>=1:
+            return max(s)
+        else:
+            return -1
+        
