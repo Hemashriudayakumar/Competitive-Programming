@@ -1,0 +1,15 @@
+ def missingNumber(self,arr):
+        #Your code here
+        li=set(i for i in arr if i>0)
+        if (len(li)<1):
+            return 1
+        else:
+            maxi=max(li)
+            flag=0
+            for i in range(1,maxi+2):
+                #print("result")
+                if i not in li:
+                    flag=1
+                    return i 
+            if flag==0:
+                return maxi+1
