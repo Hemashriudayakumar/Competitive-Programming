@@ -1,0 +1,28 @@
+class Solution:
+    def myAtoi(self, s):
+        # Code here
+        
+        rem=0
+        nonNegative=False
+        sr=s.strip() 
+        if sr[0]=='-':
+            nonNegative=True
+            sr=sr[1::]
+           
+        for i in range(0,len(sr)):
+            
+            if sr[i].isnumeric():
+                rem=rem*10+int(sr[i])
+                #print(rem)
+                #print(s[i])
+            else:
+               break;
+        if(nonNegative):
+            rem=rem*-1
+        if(rem<2**31-1 and rem>(-2**31)):
+            return(rem)
+        elif(rem>2**31-1):
+            return(2**31-1)
+        else:
+            return(-2**31)
+    
