@@ -1,0 +1,30 @@
+	def findSum(self, X, Y):
+		# code here
+        s1=X.strip()
+        s1=s1[::-1]
+        s2=Y.strip()
+        s2=s2[::-1]
+        res=''
+        carry=0
+        for i in range(max(len(s1),len(s2))):
+            bit_sum=carry
+            if i<len(s1):
+                bit_sum+=int(s1[i])
+            
+            if i<len(s2) :
+                bit_sum+=int(s2[i]) 
+            
+            res=  str(bit_sum%10) +res
+            carry=bit_sum//10
+        if carry!=0:
+            res=str(carry)+res
+        else:
+                       
+            i=0
+            while(i<len(res)-1):
+                if(res[i]!='0'):
+                    break
+                i+=1
+            #print(s)
+            res=res[i::]
+        return res
