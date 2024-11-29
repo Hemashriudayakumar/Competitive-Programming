@@ -1,0 +1,29 @@
+def addBinary(self, s1, s2):
+		# code here
+		st1=s1.strip()
+		st1=st1[::-1]
+		st2=s2.strip()
+		st2=st2[::-1]
+		res=''
+		carry=0
+		for i in range(max(len(st1),len(st2))):
+		    bit_sum=carry
+		    if i<len(st1) and st1[i]=='1':
+		        bit_sum+=1
+		    if i<len(st2) and st2[i]=='1':
+		        bit_sum+=1
+		    res=('1' if bit_sum%2==1 else '0')+res
+		    if bit_sum<2:
+		        carry=0
+		    else:
+		        carry=1
+	    if carry!=0:
+		    res='1'+res
+    	else:
+    		 i=0
+    		 while(i<len(res)):
+    		      if(res[i]=='1'):
+    		          break;
+    		      i+=1
+    		 res=res[i::]
+    	return res
