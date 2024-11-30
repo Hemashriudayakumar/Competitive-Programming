@@ -1,0 +1,40 @@
+def SortedString(self, s:str) -> str:
+        # code here
+        li1=[]
+        li2=[]
+        new=""
+        vow=['a', 'e','i','o', 'u']
+        for I in s:
+            if I in vow:
+                li1.append(I)
+            else:
+                li2.append(I) 
+        li1.sort()  
+        li2.sort()  
+        flag=0
+        if s[0] in vow:
+            flag=1
+            
+            
+        #print(li1)
+        #print(li2)
+        i,j=0,0    
+        while(i<len(li1) and j<len(li2)):
+           if(flag==1):
+              new=new+li1[i]
+              i+=1
+              new=new+li2[j]
+              j+=1
+           else:
+              new=new+li2[j]
+              j+=1
+              new=new+li1[i]
+              i+=1   
+        while(i<len(li1)):
+            new=new+li1[i]
+            i+=1
+        while(j<len(li2)):
+            new=new+li2[j]
+            j+=1    
+                
+        return new
