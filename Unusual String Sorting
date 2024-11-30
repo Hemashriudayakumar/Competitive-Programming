@@ -1,0 +1,28 @@
+def stringSort (self,s):
+        # your code here
+        li1=[]
+        li2=[]
+        new=""
+        for I in s:
+            if ord(I) >=65 and ord(I)<=90:
+                li1.append(I)
+            else:
+                li2.append(I) 
+        li1.sort()  
+        li2.sort()  
+       
+        i,j=0,0    
+        while(i<len(li1) and j<len(li2)):
+            
+            new=new+li1[i]
+            i+=1
+            new=new+li2[j]
+            j+=1
+        while(i<len(li1)):
+            new=new+li1[i]
+            i+=1
+        while(j<len(li2)):
+            new=new+li2[j]
+            j+=1    
+                
+        return new
